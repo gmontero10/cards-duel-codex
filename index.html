@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Codex Duel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div>
+          <p class="subtitle">Inspired by classic card duels</p>
+          <h1>Codex Duel</h1>
+          <p class="tagline">
+            Command your deck, summon a creature, and push your rival's life points to
+            zero.
+          </p>
+        </div>
+        <div class="lp-board">
+          <div class="lp">
+            <span>You</span>
+            <strong id="player-lp">8000</strong>
+          </div>
+          <div class="lp">
+            <span>Rival AI</span>
+            <strong id="ai-lp">8000</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="arena">
+        <section class="field">
+          <div class="field-header">
+            <h2>Rival Field</h2>
+            <button id="end-turn" class="ghost" disabled>End Turn</button>
+          </div>
+          <div class="card-zone" id="ai-field">No monster summoned</div>
+          <div class="hand" id="ai-hand"></div>
+        </section>
+
+        <section class="center-panel">
+          <div class="status" id="status">Draw a card to begin your duel.</div>
+          <div class="actions">
+            <button id="draw-card">Draw Card</button>
+            <button id="attack" disabled>Attack</button>
+          </div>
+          <div class="log" id="duel-log"></div>
+        </section>
+
+        <section class="field">
+          <div class="field-header">
+            <h2>Your Field</h2>
+          </div>
+          <div class="card-zone" id="player-field">Summon a monster</div>
+          <div class="hand" id="player-hand"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
